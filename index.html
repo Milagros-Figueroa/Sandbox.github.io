@@ -150,7 +150,7 @@
     height: 170px; display:flex; align-items:center; justify-content:center;
     color: rgba(237,237,234,0.25); position:relative; overflow:hidden; background: var(--panel-2);
   }
-  .miniatura img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .miniatura img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; padding:10px; }
   .tarjeta-cuerpo{ padding: 16px 16px 18px; display:flex; flex-direction:column; gap:10px; flex:1; }
   .tarjeta-nombre{ font-weight:600; font-size:0.98rem; line-height:1.3; }
   .tarjeta-categoria{ font-family:'Space Mono',monospace; font-size:0.68rem; color: var(--text-dim); text-transform:uppercase; letter-spacing:0.03em; margin-top:2px; }
@@ -184,7 +184,7 @@
   .carrito-vacio{ color: var(--text-dim); font-size:0.9rem; text-align:center; margin-top:60px; }
   .item{ display:flex; gap:12px; padding: 16px 0; border-bottom:1px solid var(--line); }
   .item-miniatura{ width:52px; height:52px; border-radius:8px; background: var(--panel-2); flex-shrink:0; display:flex; align-items:center; justify-content:center; color: rgba(237,237,234,0.3); overflow:hidden; position:relative; }
-  .item-miniatura img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .item-miniatura img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
   .item-info{ flex:1; min-width:0; }
   .item-nombre{ font-size:0.88rem; font-weight:500; }
   .item-categoria{ font-family:'Space Mono',monospace; font-size:0.65rem; color: var(--text-dim); text-transform:uppercase; }
