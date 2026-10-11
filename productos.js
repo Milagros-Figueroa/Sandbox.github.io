@@ -63,4 +63,16 @@ const productos = [
     descripcion: "Material: PLA.",
     detalle: ""
   },
+
+  /* PLANTILLA PARA NUEVOS PRODUCTOS
+    {
+    id: 6,                                  // Número único: el próximo libre (si el último es 5, usá 6). No repetir.
+    nombre: "Nombre del producto",          // Título que se ve en la tarjeta y en la página del producto
+    categoria: "Vinilos",                   // "Vinilos", "Impresión 3D" o una nueva (se crea el filtro sola)
+    precio: 4500,                           // Solo el número, sin $ ni puntos
+    imagen: "assets/nombre-de-la-foto.png", // Ruta de la foto. Si todavía no tenés, dejá "" y se ve un ícono
+    descripcion: "",                        // Texto corto que se suma al de la categoría (opcional, puede quedar "")
+    detalle: ""                             // Texto largo para la página del producto: medidas, materiales, colores (opcional)
+  },
+  */
 ];
