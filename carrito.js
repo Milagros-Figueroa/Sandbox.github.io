@@ -17,6 +17,15 @@ function buscarProducto(id){
   return productos.find(p => p.id === id);
 }
 
+function textoDelProducto(producto){
+  return [TEXTO_POR_CATEGORIA[producto.categoria], producto.descripcion].filter(Boolean).join(' ');
+}
+
+function armarDescripcion(producto){
+  return [textoDelProducto(producto), AVISO_PLAZO].filter(Boolean).join(' ');
+}
+
+
 // Ícono según la categoría (se usa cuando no hay foto)
 function iconoPara(categoria){
   const c = categoria.toLowerCase();
