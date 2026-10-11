@@ -8,6 +8,13 @@ const TELEFONO_WHATSAPP = "5491130157309";
 // Este texto aparece en TODOS los productos
 const AVISO_PLAZO = "Pedido personalizado: demora 15 días hábiles desde la confirmación de la impresión del modelo.";
 
+// Texto que se agrega a TODOS los productos de una categoría.
+// La palabra de la izquierda tiene que ser igual a la "categoria" del producto.
+const TEXTO_POR_CATEGORIA = {
+  "Vinilos": "Stickers de vinilo resistente al agua, sol y roce.",
+  // "Impresión 3D": "Material: PLA.",
+};
+
 /* =====================================================================
    PRODUCTOS
    Para agregar uno nuevo, copiá una línea, cambiá el id (que no se repita)
@@ -34,7 +41,7 @@ const productos = [
     nombre: "Vinilo Personalizado x50 unidades",
     categoria: "Vinilos",
     precio: 30000,
-    imagen: "assets/productos/LlaveroPersonalizado2.jpeg",
+    imagen: "assets/llaveroPersonalizado2.jpeg",
     descripcion: "",
     detalle: ""
   },
@@ -43,7 +50,7 @@ const productos = [
     nombre: "Sticker Argentina",
     categoria: "Vinilos",
     precio: 2500,
-    imagen: "assets/productos/Argentina.png",
+    imagen: "assets/Argentina.png",
     descripcion: "",
     detalle: ""
   },

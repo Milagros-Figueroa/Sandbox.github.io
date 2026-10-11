@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Producto — sandboX Stickers</title>
+<title>Producto — Sandbox Stickers</title>
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 
 <header>
   <div class="nav wrap">
-    <a class="logo" href="index.html"><img src="assets/logo.png" alt="sandboX Stickers" class="logo-img"><span>sandbo<span class="logo-x">X</span></span></a>
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="sandboX Stickers" class="logo-img"><span>Sandbo<span class="logo-x">x</span></span></a>
     <nav class="nav-links">
       <a href="index.html#catalogo">Catálogo</a>
       <a href="index.html#contacto">Contacto</a>
@@ -32,7 +32,7 @@
 
 <footer id="contacto">
   <div class="pie-contenido">
-    <span>sandbox Stickers — hecho en Buenos Aires 🧉</span>
+    <span>Sandbox Stickers — hecho en Buenos Aires 🧉</span>
     <span>
       <a href="https://www.instagram.com/sandbox2401" target="_blank" rel="noopener">Instagram</a> ·
       <a href="https://www.tiktok.com/@sandbox2401" target="_blank" rel="noopener">TikTok</a> ·
@@ -80,7 +80,7 @@
           <span class="detalle-categoria">${producto.categoria}</span>
           <h1>${producto.nombre}</h1>
           <div class="detalle-precio">${formatearPrecio(producto.precio)}</div>
-          ${producto.descripcion ? `<p class="detalle-texto">${producto.descripcion}</p>` : ''}
+          ${textoDelProducto(producto) ? `<p class="detalle-texto">${textoDelProducto(producto)}</p>` : ''}
           ${producto.detalle ? `<p class="detalle-texto">${producto.detalle}</p>` : ''}
           <div class="caja-plazo"><strong>Tiempo de entrega:</strong> ${AVISO_PLAZO}</div>
           <div class="detalle-botones">
