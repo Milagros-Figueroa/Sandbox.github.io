@@ -26,6 +26,7 @@ function armarDescripcion(producto){
 }
 
 
+
 // Ícono según la categoría (se usa cuando no hay foto)
 function iconoPara(categoria){
   const c = categoria.toLowerCase();
