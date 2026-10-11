@@ -33,7 +33,7 @@ const productos = [
     categoria: "Vinilos",
     precio: 7000,
     imagen: "",
-    descripcion: "",
+    descripcion: "Pack mixto entre holograficos y vinilo blanco. Entre 6 y 8cm de largo",
     detalle: ""
   },
   {
@@ -51,7 +51,7 @@ const productos = [
     categoria: "Vinilos",
     precio: 1000,
     imagen: "assets/Argentina.png",
-    descripcion: "",
+    descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
   {
