@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producto — sandboX Stickers</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="sandboX Stickers" class="logo-img"><span>sandbo<span class="logo-x">X</span></span></a>
+    <nav class="nav-links">
+      <a href="index.html#catalogo">Catálogo</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <button class="btn-carrito" id="botonCarrito" aria-label="Abrir carrito">
+      🛒 Carrito <span class="contador-carrito" id="contadorCarrito">0</span>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="volver" href="index.html#catalogo">← Volver al catálogo</a>
+  <div id="contenido"></div>
+</main>
+
+<footer id="contacto">
+  <div class="pie-contenido">
+    <span>sandbox Stickers — hecho en Buenos Aires 🧉</span>
+    <span>
+      <a href="https://www.instagram.com/sandbox2401" target="_blank" rel="noopener">Instagram</a> ·
+      <a href="https://www.tiktok.com/@sandbox2401" target="_blank" rel="noopener">TikTok</a> ·
+      <a href="https://wa.me/5491130157309" target="_blank" rel="noopener">WhatsApp</a>
+    </span>
+  </div>
+</footer>
+
+<script src="productos.js"></script>
+<script src="carrito.js"></script>
+<script>
+  /* =====================================================================
+     PÁGINA DE PRODUCTO
+     La dirección es producto.html?id=4  ->  muestra el producto con id 4
+     ===================================================================== */
+
+  function obtenerIdDeLaDireccion(){
+    const parametros = new URLSearchParams(window.location.search);
+    return Number(parametros.get('id'));
+  }
+
+  function dibujarProducto(){
+    const contenido = document.getElementById('contenido');
+    const producto = buscarProducto(obtenerIdDeLaDireccion());
+
+    if (!producto){
+      contenido.innerHTML = `
+        <div class="no-encontrado">
+          <h2>No encontramos este producto</h2>
+          <p>Puede que ya no esté disponible.</p>
+          <a class="btn btn-principal" href="index.html#catalogo">Ver el catálogo</a>
+        </div>`;
+      return;
+    }
+
+    document.title = `${producto.nombre} — sandboX Stickers`;
+
+    const mensajeConsulta = `Hola! Quiero consultar por: ${producto.nombre} (${formatearPrecio(producto.precio)})`;
+    const linkConsulta = `https://wa.me/${TELEFONO_WHATSAPP}?text=${encodeURIComponent(mensajeConsulta)}`;
+
+    contenido.innerHTML = `
+      <div class="detalle">
+        <div class="detalle-imagen">${armarMiniatura(producto)}</div>
+        <div class="detalle-info">
+          <span class="detalle-categoria">${producto.categoria}</span>
+          <h1>${producto.nombre}</h1>
+          <div class="detalle-precio">${formatearPrecio(producto.precio)}</div>
+          ${producto.descripcion ? `<p class="detalle-texto">${producto.descripcion}</p>` : ''}
+          ${producto.detalle ? `<p class="detalle-texto">${producto.detalle}</p>` : ''}
+          <div class="caja-plazo"><strong>Tiempo de entrega:</strong> ${AVISO_PLAZO}</div>
+          <div class="detalle-botones">
+            <button class="btn btn-principal" id="botonAgregar">Agregar al carrito</button>
+            <a class="btn btn-borde" href="${linkConsulta}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('botonAgregar').addEventListener('click', () => {
+      agregarAlCarrito(producto.id);
+      abrirCarrito();
+    });
+  }
+
+  iniciarCarrito();
+  dibujarProducto();
+</script>
+</body>
+</html>

@@ -8,223 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #0a0a0d;
-    --panel: #16171f;
-    --panel-2: #1e2029;
-    --line: #2f3140;
-    --text: #f2f1ee;
-    --text-dim: #9396ab;
-    --acento: #7c8ce6;
-    --naranja: #ff7a45;
-    --rojo: #ff4757;
-    --radius: 14px;
-  }
-  *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
-  body{
-    margin:0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  h1,h2,h3{ font-family:'Syne', sans-serif; letter-spacing:-0.02em; }
-  a{ color: inherit; }
-  button{ font-family: inherit; cursor:pointer; }
-  :focus-visible{ outline: 2px solid var(--acento); outline-offset: 2px; }
-
-  /* ---------- estructura ---------- */
-  .wrap{ max-width: 1180px; margin: 0 auto; padding: 0 24px; }
-  .perforacion{
-    height: 1px;
-    background-image: repeating-linear-gradient(90deg, var(--line) 0 6px, transparent 6px 14px);
-    margin: 64px 0;
-  }
-
-  /* ---------- encabezado ---------- */
-  header{
-    position: sticky; top:0; z-index: 40;
-    background: rgba(10,10,13,0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav{ display:flex; align-items:center; justify-content:space-between; padding: 16px 24px; }
-  .logo{ display:flex; align-items:center; gap:10px; font-size: 1.15rem; font-weight:700; }
-  .logo-img{ width:34px; height:34px; border-radius:50%; object-fit:cover; }
-  .logo-x{ color: var(--acento); }
-  .nav-links{ display:flex; gap:28px; font-size:0.92rem; color: var(--text-dim); }
-  .nav-links a{ text-decoration:none; }
-  .nav-links a:hover{ color: var(--text); }
-  .btn-carrito{
-    display:flex; align-items:center; gap:8px;
-    background: var(--panel); border:1px solid var(--line); color: var(--text);
-    padding: 9px 16px; border-radius: 999px; font-size:0.88rem; font-weight:500;
-    transition: border-color .15s ease;
-  }
-  .btn-carrito:hover{ border-color: var(--acento); }
-  .contador-carrito{
-    background: var(--acento); color:#0e1000; font-family:'Space Mono',monospace;
-    font-size:0.72rem; font-weight:700; min-width:18px; height:18px; border-radius:999px;
-    display:flex; align-items:center; justify-content:center; padding: 0 4px;
-  }
-
-  /* ---------- presentación (terminal) ---------- */
-  .presentacion{ padding: 56px 24px 8px; }
-  .terminal{
-    max-width: 720px; margin: 0 auto;
-    background: #0d0e13; border:1px solid var(--line); border-radius: var(--radius);
-    overflow:hidden; box-shadow: 0 0 60px -20px rgba(124,140,230,0.25);
-  }
-  .terminal-cabecera{
-    display:flex; align-items:center; gap:8px;
-    padding: 12px 16px; background: var(--panel-2); border-bottom:1px solid var(--line);
-  }
-  .punto{ width:11px; height:11px; border-radius:50%; }
-  .punto.r{ background:#ff5f56; }
-  .punto.y{ background:#ffbd2e; }
-  .punto.g{ background:#27c93f; }
-  .terminal-titulo{
-    margin-left:8px; font-family:'Space Mono',monospace; font-size:0.75rem; color: var(--text-dim);
-  }
-  .terminal-cuerpo{
-    margin:0; padding: 22px 20px 26px; font-family:'Space Mono',monospace; font-size:0.85rem;
-    line-height:1.75; white-space:pre-wrap; word-break:break-word; min-height: 220px;
-  }
-  .linea{ min-height:1.75em; }
-  .cm{ color:#6b6f82; font-style:italic; }
-  .kw{ color: var(--acento); }
-  .key{ color:#e0b3ff; }
-  .str{ color:#ffd479; }
-  .num{ color: var(--naranja); }
-  .punct{ color: var(--text-dim); }
-  .code{ color: var(--text); }
-  .out-text{ color: var(--text); }
-  .cursor{
-    display:inline-block; width:8px; height:1em; background: var(--acento);
-    vertical-align:text-bottom; margin-left:2px; animation: parpadeo 1s step-end infinite;
-  }
-  @keyframes parpadeo{ 50%{ opacity:0; } }
-
-  /* ---------- portada ---------- */
-  .portada{ padding: 56px 24px 20px; text-align:center; }
-  .portada-etiqueta{
-    display:inline-block; font-family:'Space Mono',monospace; font-size:0.78rem;
-    color: var(--acento); border:1px dashed var(--acento); border-radius:999px;
-    padding: 5px 14px; margin-bottom: 26px; letter-spacing: 0.04em;
-  }
-  .portada h1{ font-size: clamp(2.1rem, 5vw, 3.6rem); line-height:1.05; margin:0 auto; max-width: 820px; font-weight:800; }
-  .portada h1 .corte{ position:relative; display:inline-block; padding: 0 8px; }
-  .portada h1 .corte svg{ position:absolute; inset:-6px -4px; width:calc(100% + 8px); height:calc(100% + 12px); }
-  .portada h1 .corte path{
-    fill:none; stroke: var(--naranja); stroke-width:2; stroke-dasharray: 6 6;
-    stroke-dashoffset: 300; animation: dibujar 2.2s ease forwards .3s;
-  }
-  @keyframes dibujar{ to{ stroke-dashoffset: 0; } }
-  .portada p{ color: var(--text-dim); max-width: 560px; margin: 22px auto 0; font-size:1.02rem; line-height:1.6; }
-
-  /* ---------- filtros ---------- */
-  .filtros{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 30px; }
-  .chip{
-    background: var(--panel); border:1px solid var(--line); color: var(--text-dim);
-    padding: 8px 16px; border-radius: 999px; font-size:0.85rem; transition: all .15s ease;
-  }
-  .chip.activo, .chip:hover{ border-color: var(--acento); color: var(--text); }
-  .chip.activo{ background: rgba(124,140,230,0.12); }
-
-  /* ---------- productos ---------- */
-  .grilla{ display:grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap: 20px; padding-bottom: 90px; }
-  .tarjeta{
-    background: var(--panel); border:1px solid var(--line); border-radius: var(--radius);
-    overflow:hidden; position:relative; display:flex; flex-direction:column;
-    transition: border-color .18s ease, transform .18s ease;
-  }
-  .tarjeta:hover{ transform: translateY(-3px); border-color: transparent; }
-  .tarjeta:hover .borde-corte{ opacity:1; }
-  .borde-corte{
-    position:absolute; inset:0; border-radius: var(--radius); pointer-events:none;
-    border: 2px dashed var(--acento); opacity:0; transition: opacity .18s ease; z-index:2;
-  }
-  .miniatura{
-    height: 170px; display:flex; align-items:center; justify-content:center;
-    color: rgba(237,237,234,0.25); position:relative; overflow:hidden; background: var(--panel-2);
-  }
-  .miniatura img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; padding:10px; }
-  .tarjeta-cuerpo{ padding: 16px 16px 18px; display:flex; flex-direction:column; gap:10px; flex:1; }
-  .tarjeta-nombre{ font-weight:600; font-size:0.98rem; line-height:1.3; }
-  .tarjeta-categoria{ font-family:'Space Mono',monospace; font-size:0.68rem; color: var(--text-dim); text-transform:uppercase; letter-spacing:0.03em; margin-top:2px; }
-  .tarjeta-desc{ margin:0; font-size:0.8rem; line-height:1.5; color: var(--text-dim); }
-  .tarjeta-pie{ display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:6px; }
-  .precio{ font-family:'Space Mono',monospace; font-weight:700; font-size:1.02rem; }
-  .btn-agregar{
-    background: var(--panel-2); border:1px solid var(--line); color: var(--text);
-    width: 36px; height:36px; border-radius:8px; font-size:1.1rem; display:flex; align-items:center; justify-content:center;
-  }
-  .btn-agregar:hover{ background: var(--acento); color:#0e1000; border-color: var(--acento); }
-
-  /* ---------- carrito ---------- */
-  .fondo-oscuro{
-    position:fixed; inset:0; background: rgba(0,0,0,0.55); opacity:0; pointer-events:none;
-    transition: opacity .2s ease; z-index:60;
-  }
-  .fondo-oscuro.abierto{ opacity:1; pointer-events:auto; }
-  .panel-carrito{
-    position:fixed; top:0; right:0; height:100%; width:min(400px,92vw);
-    background: var(--panel); border-left:1px solid var(--line);
-    transform: translateX(100%); transition: transform .25s ease; z-index:70;
-    display:flex; flex-direction:column;
-  }
-  .panel-carrito.abierto{ transform: translateX(0); }
-  .carrito-cabecera{ padding: 22px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center; }
-  .carrito-cabecera h3{ margin:0; font-size:1.1rem; }
-  .btn-cerrar{ background:none; border:none; color: var(--text-dim); font-size:1.4rem; line-height:1; }
-  .btn-cerrar:hover{ color: var(--text); }
-  .carrito-items{ flex:1; overflow-y:auto; padding: 12px 22px; }
-  .carrito-vacio{ color: var(--text-dim); font-size:0.9rem; text-align:center; margin-top:60px; }
-  .item{ display:flex; gap:12px; padding: 16px 0; border-bottom:1px solid var(--line); }
-  .item-miniatura{ width:52px; height:52px; border-radius:8px; background: var(--panel-2); flex-shrink:0; display:flex; align-items:center; justify-content:center; color: rgba(237,237,234,0.3); overflow:hidden; position:relative; }
-  .item-miniatura img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
-  .item-info{ flex:1; min-width:0; }
-  .item-nombre{ font-size:0.88rem; font-weight:500; }
-  .item-categoria{ font-family:'Space Mono',monospace; font-size:0.65rem; color: var(--text-dim); text-transform:uppercase; }
-  .item-controles{ display:flex; align-items:center; gap:10px; margin-top:8px; }
-  .btn-cantidad{ width:22px; height:22px; border-radius:6px; background: var(--panel-2); border:1px solid var(--line); color:var(--text); font-size:0.85rem; display:flex; align-items:center; justify-content:center; }
-  .cantidad{ font-family:'Space Mono',monospace; font-size:0.85rem; min-width:16px; text-align:center; }
-  .item-precio{ font-family:'Space Mono',monospace; font-size:0.85rem; margin-left:auto; }
-  .btn-quitar{ background:none; border:none; color: var(--rojo); font-size:0.75rem; margin-top:6px; padding:0; }
-  .carrito-pie{ padding: 20px 22px 24px; border-top:1px solid var(--line); }
-  .fila-total{ display:flex; justify-content:space-between; font-size:0.95rem; margin-bottom:16px; }
-  .fila-total .valor{ font-family:'Space Mono',monospace; font-weight:700; }
-  .btn{
-    border:none; border-radius: 10px; padding: 13px 26px; font-weight:600; font-size:0.94rem;
-    transition: transform .12s ease, opacity .15s ease;
-  }
-  .btn:active{ transform: scale(0.97); }
-  .btn-finalizar{ width:100%; background: var(--acento); color:#0e1000; }
-  .btn-finalizar:hover{ opacity:0.88; }
-
-  /* ---------- pie de página ---------- */
-  footer{ border-top:1px solid var(--line); padding: 40px 24px; }
-  .pie-contenido{ max-width:1180px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; color: var(--text-dim); font-size:0.85rem; }
-  .pie-contenido a{ color: var(--text-dim); text-decoration:none; }
-  .pie-contenido a:hover{ color: var(--acento); }
-
-  @media (max-width: 640px){
-    .nav-links{ display:none; }
-    .portada{ padding-top:40px; }
-    .terminal-cuerpo{ font-size:0.78rem; padding:18px 14px 22px; }
-  }
-  @media (prefers-reduced-motion: reduce){
-    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-  }
-</style>
+<link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
 <header>
   <div class="nav wrap">
-    <div class="logo"><img src="assets/logo.png" alt="sandboX Stickers" class="logo-img"><span>sandbo<span class="logo-x">X</span></span></div>
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="sandboX Stickers" class="logo-img"><span>sandbo<span class="logo-x">X</span></span></a>
     <nav class="nav-links">
       <a href="#catalogo">Catálogo</a>
       <a href="#contacto">Contacto</a>
@@ -275,83 +65,13 @@
   </div>
 </footer>
 
-<div class="fondo-oscuro" id="fondoOscuro"></div>
-<aside class="panel-carrito" id="panelCarrito" aria-label="Carrito de compras">
-  <div class="carrito-cabecera">
-    <h3>Tu carrito</h3>
-    <button class="btn-cerrar" id="botonCerrar" aria-label="Cerrar carrito">×</button>
-  </div>
-  <div class="carrito-items" id="carritoItems"></div>
-  <div class="carrito-pie">
-    <div class="fila-total"><span>Total</span><span class="valor" id="totalCarrito">$0</span></div>
-    <button class="btn btn-finalizar" id="botonFinalizar">Finalizar por WhatsApp</button>
-  </div>
-</aside>
-
+<script src="productos.js"></script>
+<script src="carrito.js"></script>
 <script>
   /* =====================================================================
-     CONFIGURACIÓN: acá editás tus datos
+     CATÁLOGO (solo de esta página)
      ===================================================================== */
-
-  // Tu número de WhatsApp (código de país + 9 + número, sin + ni espacios)
-  const TELEFONO_WHATSAPP = "5491130157309";
-
-  // Este texto se agrega a la descripción de TODOS los productos
-  const AVISO_PLAZO = "Pedido personalizado: demora 15 días hábiles desde la confirmación de la impresión del modelo.";
-
-  /* =====================================================================
-     PRODUCTOS
-     Para agregar uno nuevo, copiá una línea, cambiá el id (que no se repita)
-     y completá los datos. "descripcion" es opcional.
-     Las líneas que empiezan con // están desactivadas (no se muestran).
-     ===================================================================== */
-  const productos = [
-    { id: 1, nombre: "Combo x5 stickers Argentina", categoria: "Vinilos", precio: 7000, imagen: "", descripcion: "" },
-    { id: 2, nombre: "Llaveros Personalizados x50 unidades", categoria: "Impresión 3D", precio: 40000, imagen: "assets/llaveroPersonalizado2.jpeg", descripcion: "Inlcuyen el diseño + la argolla + la pieza en PLA" },
-    { id: 4, nombre: "Sticker Argentina", categoria: "Vinilos", precio: 1000, imagen: "assets/Argentina.png", descripcion: "Vinilo resistente al agua, sol y roce." },
-    { id: 5, nombre: "Soporte de celular 3D", categoria: "Impresión 3D", precio: 6400, imagen: "", descripcion: "Material: PLA." },
-    // { id: 6, nombre: "Nombre del producto", categoria: "Categoría", precio: 4500, imagen: "assets/productos/nombre-foto.jpg", descripcion: "Texto opcional" },
-  ];
-
-  /* =====================================================================
-     ESTADO (se reinicia al recargar la página)
-     ===================================================================== */
-  let carrito = [];                 // lista de { id, cantidad }
   let categoriaActiva = "Todos";
-
-  /* =====================================================================
-     FUNCIONES AUXILIARES
-     ===================================================================== */
-
-  // Convierte un número en precio argentino, ej: 7000 -> $7.000
-  function formatearPrecio(numero){
-    return new Intl.NumberFormat('es-AR', { style:'currency', currency:'ARS', maximumFractionDigits:0 }).format(numero);
-  }
-
-  // Devuelve un ícono según la categoría (se usa cuando no hay foto)
-  function iconoPara(categoria){
-    const c = categoria.toLowerCase();
-    if (c.includes('3d')) {
-      return `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></svg>`;
-    }
-    if (c.includes('combo')) {
-      return `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="14" rx="1"/><path d="M3 11h18M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`;
-    }
-    return `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6M6 15l6-6M20 6l-9 9M20 18l-9-9"/></svg>`;
-  }
-
-  // Arma la miniatura: el ícono queda de fondo y la foto va encima.
-  // Si la foto no carga, se esconde y se ve el ícono (en vez de una imagen rota).
-  function armarMiniatura(producto){
-    const foto = producto.imagen
-      ? `<img src="${producto.imagen}" alt="${producto.nombre}" onerror="this.remove()">`
-      : '';
-    return iconoPara(producto.categoria) + foto;
-  }
-
-  /* =====================================================================
-     DIBUJAR EN PANTALLA
-     ===================================================================== */
 
   function dibujarCategorias(){
     const categorias = ["Todos", ...new Set(productos.map(p => p.categoria))];
@@ -374,100 +94,24 @@
     grilla.innerHTML = lista.map(p => `
       <div class="tarjeta">
         <div class="borde-corte"></div>
-        <div class="miniatura">${armarMiniatura(p)}</div>
-        <div class="tarjeta-cuerpo">
-          <div>
-            <div class="tarjeta-nombre">${p.nombre}</div>
-            <div class="tarjeta-categoria">${p.categoria}</div>
+        <a class="tarjeta-link" href="producto.html?id=${p.id}">
+          <div class="miniatura">${armarMiniatura(p)}</div>
+          <div class="tarjeta-info">
+            <div>
+              <div class="tarjeta-nombre">${p.nombre}</div>
+              <div class="tarjeta-categoria">${p.categoria}</div>
+            </div>
+            <p class="tarjeta-desc">${p.descripcion ? p.descripcion + ' ' : ''}${AVISO_PLAZO}</p>
+            <span class="tarjeta-ver">Ver producto →</span>
           </div>
-          <p class="tarjeta-desc">${p.descripcion ? p.descripcion + ' ' : ''}${AVISO_PLAZO}</p>
-          <div class="tarjeta-pie">
-            <span class="precio">${formatearPrecio(p.precio)}</span>
-            <button class="btn-agregar" data-agregar="${p.id}" aria-label="Agregar ${p.nombre} al carrito">+</button>
-          </div>
+        </a>
+        <div class="tarjeta-pie">
+          <span class="precio">${formatearPrecio(p.precio)}</span>
+          <button class="btn-agregar" data-agregar="${p.id}" aria-label="Agregar ${p.nombre} al carrito">+</button>
         </div>
       </div>
     `).join('');
   }
-
-  function dibujarCarrito(){
-    const items = carrito.map(ci => ({ ...productos.find(p => p.id === ci.id), cantidad: ci.cantidad }));
-    const totalUnidades = items.reduce((suma, i) => suma + i.cantidad, 0);
-    document.getElementById('contadorCarrito').textContent = totalUnidades;
-
-    const caja = document.getElementById('carritoItems');
-    if (!items.length){
-      caja.innerHTML = `<p class="carrito-vacio">Tu carrito está vacío.<br>Agregá algo del catálogo.</p>`;
-    } else {
-      caja.innerHTML = items.map(i => `
-        <div class="item">
-          <div class="item-miniatura">${armarMiniatura(i)}</div>
-          <div class="item-info">
-            <div class="item-nombre">${i.nombre}</div>
-            <div class="item-categoria">${i.categoria}</div>
-            <div class="item-controles">
-              <button class="btn-cantidad" data-restar="${i.id}">−</button>
-              <span class="cantidad">${i.cantidad}</span>
-              <button class="btn-cantidad" data-sumar="${i.id}">+</button>
-              <span class="item-precio">${formatearPrecio(i.precio * i.cantidad)}</span>
-            </div>
-            <button class="btn-quitar" data-quitar="${i.id}">Quitar</button>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    const total = items.reduce((suma, i) => suma + i.precio * i.cantidad, 0);
-    document.getElementById('totalCarrito').textContent = formatearPrecio(total);
-  }
-
-  /* =====================================================================
-     ACCIONES DEL CARRITO
-     ===================================================================== */
-
-  function agregarAlCarrito(id){
-    const enCarrito = carrito.find(ci => ci.id === id);
-    if (enCarrito) enCarrito.cantidad++;
-    else carrito.push({ id, cantidad: 1 });
-    dibujarCarrito();
-  }
-
-  function cambiarCantidad(id, cambio){
-    const enCarrito = carrito.find(ci => ci.id === id);
-    if (!enCarrito) return;
-    enCarrito.cantidad += cambio;
-    if (enCarrito.cantidad <= 0) quitarDelCarrito(id);
-    else dibujarCarrito();
-  }
-
-  function quitarDelCarrito(id){
-    carrito = carrito.filter(ci => ci.id !== id);
-    dibujarCarrito();
-  }
-
-  function abrirCarrito(){
-    document.getElementById('fondoOscuro').classList.add('abierto');
-    document.getElementById('panelCarrito').classList.add('abierto');
-  }
-
-  function cerrarCarrito(){
-    document.getElementById('fondoOscuro').classList.remove('abierto');
-    document.getElementById('panelCarrito').classList.remove('abierto');
-  }
-
-  // Arma el mensaje con el pedido y abre WhatsApp
-  function finalizarPedido(){
-    if (!carrito.length) return;
-    const items = carrito.map(ci => ({ ...productos.find(p => p.id === ci.id), cantidad: ci.cantidad }));
-    const lineas = items.map(i => `• ${i.cantidad}x ${i.nombre} — ${formatearPrecio(i.precio * i.cantidad)}`).join('\n');
-    const total = items.reduce((suma, i) => suma + i.precio * i.cantidad, 0);
-    const mensaje = `Hola! Quiero encargar:\n${lineas}\n\nTotal: ${formatearPrecio(total)}`;
-    window.open(`https://wa.me/${TELEFONO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`, '_blank');
-  }
-
-  /* =====================================================================
-     EVENTOS (qué pasa cuando se hace clic)
-     ===================================================================== */
 
   document.getElementById('filaFiltros').addEventListener('click', e => {
     const boton = e.target.closest('[data-categoria]');
@@ -482,20 +126,6 @@
     if (!boton) return;
     agregarAlCarrito(Number(boton.dataset.agregar));
   });
-
-  document.getElementById('carritoItems').addEventListener('click', e => {
-    const sumar = e.target.closest('[data-sumar]');
-    const restar = e.target.closest('[data-restar]');
-    const quitar = e.target.closest('[data-quitar]');
-    if (sumar) cambiarCantidad(Number(sumar.dataset.sumar), 1);
-    if (restar) cambiarCantidad(Number(restar.dataset.restar), -1);
-    if (quitar) quitarDelCarrito(Number(quitar.dataset.quitar));
-  });
-
-  document.getElementById('botonCarrito').addEventListener('click', abrirCarrito);
-  document.getElementById('botonCerrar').addEventListener('click', cerrarCarrito);
-  document.getElementById('fondoOscuro').addEventListener('click', cerrarCarrito);
-  document.getElementById('botonFinalizar').addEventListener('click', finalizarPedido);
 
   /* =====================================================================
      PRESENTACIÓN TIPO TERMINAL
@@ -569,10 +199,10 @@
   /* =====================================================================
      INICIO
      ===================================================================== */
+  iniciarCarrito();
   escribirTerminal();
   dibujarCategorias();
   dibujarProductos();
-  dibujarCarrito();
 </script>
 </body>
 </html>
