@@ -14,7 +14,7 @@
 
 <header>
   <div class="nav wrap">
-    <a class="logo" href="index.html"><img src="assets/logo.png" alt="sandboX Stickers" class="logo-img"><span>sandbo<span class="logo-x">X</span></span></a>
+    <a class="logo" href="index.html"><img src="assets/logo.png" alt="Sandbox Stickers" class="logo-img"><span>sandbo<span class="logo-x">X</span></span></a>
     <nav class="nav-links">
       <a href="#catalogo">Catálogo</a>
       <a href="#contacto">Contacto</a>
@@ -37,7 +37,7 @@
 
 <section class="portada">
   <div class="wrap">
-    <span class="portada-etiqueta">sandbox stickers · calcos · vinilos · impresión 3D</span>
+    <span class="portada-etiqueta">Sandbox stickers · calcos · vinilos · impresión 3D</span>
     <h1>Diseños que <span class="corte">se cortan
       <svg viewBox="0 0 160 40" preserveAspectRatio="none"><path d="M2,20 Q80,2 158,20 Q80,38 2,20 Z"/></svg>
     </span> solos.</h1>
@@ -56,7 +56,7 @@
 
 <footer id="contacto">
   <div class="pie-contenido">
-    <span>sandbox Stickers — hecho en Buenos Aires 🧉</span>
+    <span>Sandbox Stickers — hecho en Buenos Aires 🧉</span>
     <span>
       <a href="https://www.instagram.com/sandbox2401" target="_blank" rel="noopener">Instagram</a> ·
       <a href="https://www.tiktok.com/@sandbox2401" target="_blank" rel="noopener">TikTok</a> ·
@@ -101,7 +101,7 @@
               <div class="tarjeta-nombre">${p.nombre}</div>
               <div class="tarjeta-categoria">${p.categoria}</div>
             </div>
-            <p class="tarjeta-desc">${p.descripcion ? p.descripcion + ' ' : ''}${AVISO_PLAZO}</p>
+           <p class="tarjeta-desc">${armarDescripcion(p)}</p>
             <span class="tarjeta-ver">Ver producto →</span>
           </div>
         </a>
@@ -137,7 +137,7 @@
     { partes: [{ t: "const", c: "kw" }, { t: " persona = {", c: "code" }] },
     { partes: [{ t: "  nombre", c: "key" }, { t: ": ", c: "punct" }, { t: '"Milagros"', c: "str" }, { t: ",", c: "punct" }] },
     { partes: [{ t: "  edad", c: "key" }, { t: ": ", c: "punct" }, { t: "25", c: "num" }, { t: ",", c: "punct" }] },
-    { partes: [{ t: "  emprendimiento", c: "key" }, { t: ": ", c: "punct" }, { t: '"sandbox Stickers"', c: "str" }, { t: ",", c: "punct" }] },
+    { partes: [{ t: "  emprendimiento", c: "key" }, { t: ": ", c: "punct" }, { t: '"Sandbox Stickers"', c: "str" }, { t: ",", c: "punct" }] },
     { partes: [{ t: "  fundado", c: "key" }, { t: ": ", c: "punct" }, { t: "2022", c: "num" }, { t: ",", c: "punct" }] },
     { partes: [{ t: "  estudios", c: "key" }, { t: ": ", c: "punct" }, { t: '"Lic. en Informática"', c: "str" }, { t: ",", c: "punct" }] },
     { partes: [{ t: "};", c: "code" }] },

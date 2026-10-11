@@ -11,7 +11,7 @@ const AVISO_PLAZO = "Pedido personalizado: demora 15 días hábiles desde la con
 // Texto que se agrega a TODOS los productos de una categoría.
 // La palabra de la izquierda tiene que ser igual a la "categoria" del producto.
 const TEXTO_POR_CATEGORIA = {
-  "Vinilos": "Stickers de vinilo resistente al agua, sol y roce.",
+  "Vinilos": "Stickers de vinilo resistentes al agua, sol y roce.",
   // "Impresión 3D": "Material: PLA.",
 };
 
@@ -38,18 +38,18 @@ const productos = [
   },
   {
     id: 2,
-    nombre: "Vinilo Personalizado x50 unidades",
-    categoria: "Vinilos",
-    precio: 30000,
+    nombre: "Llaveros Personalizados x50 unidades",
+    categoria: "Impresión 3D",
+    precio: 40000,
     imagen: "assets/llaveroPersonalizado2.jpeg",
-    descripcion: "",
+    descripcion: "Incluyen el diseño + la argolla + la pieza en PLA.",
     detalle: ""
   },
   {
     id: 4,
     nombre: "Sticker Argentina",
     categoria: "Vinilos",
-    precio: 2500,
+    precio: 1000,
     imagen: "assets/Argentina.png",
     descripcion: "",
     detalle: ""
@@ -60,16 +60,7 @@ const productos = [
     categoria: "Impresión 3D",
     precio: 6400,
     imagen: "",
-    descripcion: "",
+    descripcion: "Material: PLA.",
     detalle: ""
   },
-  // {
-  //   id: 6,
-  //   nombre: "Nombre del producto",
-  //   categoria: "Categoría",
-  //   precio: 4500,
-  //   imagen: "assets/productos/nombre-foto.jpg",
-  //   descripcion: "Texto corto opcional",
-  //   detalle: "Texto largo opcional: medidas, materiales, colores disponibles..."
-  // },
 ];
