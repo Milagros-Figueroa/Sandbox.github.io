@@ -51,7 +51,7 @@ const productos = [
     detalle: ""
   },
   {
-    id: 4,
+    id: 3,
     nombre: "Sticker Argentina",
     categoria: "Vinilos",
     subcategoria: "Blancos",
@@ -61,7 +61,7 @@ const productos = [
     detalle: ""
   },
   {
-    id: 5,
+    id: 4,
     nombre: "Soporte de celular 3D",
     categoria: "Impresión 3D",
     subcategoria: "", //aun sin subcategoria
@@ -72,7 +72,7 @@ const productos = [
   },
 
    {
-    id: 6,
+    id: 5,
     nombre: "Sticker Cazador de Bugs",
     categoria: "Vinilos",
     subcategoria: "Blancos",
@@ -83,7 +83,7 @@ const productos = [
   },
 
    {
-    id: 7,
+    id: 6,
     nombre: "Sticker Debi tirar mas mates",
     categoria: "Vinilos",
     subcategoria: "Blancos",
@@ -94,7 +94,7 @@ const productos = [
   },
 
    {
-    id: 8,
+    id: 7,
     nombre: "Sticker Mandala Solar",
     categoria: "Vinilos",
     subcategoria: "Holográficos",
@@ -116,8 +116,8 @@ const productos = [
   },
 
      {
-    id: 10,
-    nombre: "Sticker Unos Matematicos",
+    id: 9,
+    nombre: "Sticker Unos MatemÁticos",
     categoria: "Vinilos",
     subcategoria: "Blancos",
     precio: 1000,
@@ -127,7 +127,7 @@ const productos = [
   },
 
      {
-    id: 11,
+    id: 10,
     nombre: "Sticker Pobreza Gaucha",
     categoria: "Vinilos",
     subcategoria: "Blancos",
@@ -138,7 +138,7 @@ const productos = [
   },
 
      {
-    id: 12,
+    id: 11,
     nombre: "Sticker poco Polvo",
     categoria: "Vinilos",
     subcategoria: "Blancos",
@@ -149,8 +149,8 @@ const productos = [
   },
 
   {
-    id: 13,
-    nombre: "Sticker Debi tirar mas Fots",
+    id: 12,
+    nombre: "Sticker Debi tirar mas Fotos",
     categoria: "Vinilos",
     subcategoria: "Transparentes",
     precio: 1500,
@@ -160,7 +160,7 @@ const productos = [
   },
 
   {
-    id: 14,
+    id: 13,
     nombre: "Sticker Gato con Vinito",
     categoria: "Vinilos",
     subcategoria: "Blancos",
@@ -171,7 +171,7 @@ const productos = [
   },
 
   {
-    id: 15,
+    id: 14,
     nombre: "Sticker de Discos",
     categoria: "Vinilos",
     subcategoria: "Blancos",
@@ -181,7 +181,7 @@ const productos = [
     detalle: ""
   },
 
-  //16
+  //15
 
 
   /* PLANTILLA PARA NUEVOS PRODUCTOS
