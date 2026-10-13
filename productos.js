@@ -64,6 +64,38 @@ const productos = [
     detalle: ""
   },
 
+   {
+    id: 6,
+    nombre: "Sticker Cazador de Bugs",
+    categoria: "Vinilos",
+    precio: 1000,
+    imagen: "assets/bugHunter.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+   {
+    id: 7,
+    nombre: "Sticker Debi tirar mas mates",
+    categoria: "Vinilos",
+    precio: 1000,
+    imagen: "assets/debiTirarMasMates.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+   {
+    id: 8,
+    nombre: "Sticker Mandana Solar",
+    categoria: "Vinilos",
+    precio: 1500,
+    imagen: "assets/mandalaSolar.png",
+    descripcion: "Tamaño 8cm aprox.",
+    detalle: ""
+  },
+
+
+
   /* PLANTILLA PARA NUEVOS PRODUCTOS
     {
     id: 6,                                  // Número único: el próximo libre (si el último es 5, usá 6). No repetir.
