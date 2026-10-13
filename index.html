@@ -50,6 +50,7 @@
 
   <div id="catalogo">
     <div class="filtros" id="filaFiltros"></div>
+    <div class="filtros filtros-sub" id="filaSubfiltros"></div>
     <div class="grilla" id="grilla"></div>
   </div>
 </div>
@@ -72,6 +73,7 @@
      CATÁLOGO (solo de esta página)
      ===================================================================== */
   let categoriaActiva = "Todos";
+  let subcategoriaActiva = "Todos";
 
   function dibujarCategorias(){
     const categorias = ["Todos", ...new Set(productos.map(p => p.categoria))];
@@ -80,10 +82,24 @@
     ).join('');
   }
 
+  function dibujarSubcategorias(){
+  const caja = document.getElementById('filaSubfiltros');
+  const subcategorias = SUBCATEGORIAS[categoriaActiva];
+  if (!subcategorias){
+    caja.innerHTML = '';
+    return;
+  }
+  const todas = ["Todos", ...subcategorias];
+  caja.innerHTML = todas.map(s =>
+    `<button class="chip chip-sub ${s === subcategoriaActiva ? 'activo' : ''}" data-subcategoria="${s}">${s}</button>`
+  ).join('');
+}
+
   function dibujarProductos(){
-    const lista = categoriaActiva === "Todos"
-      ? productos
-      : productos.filter(p => p.categoria === categoriaActiva);
+    const lista = productos.filter(p =>
+    (categoriaActiva === "Todos" || p.categoria === categoriaActiva) &&
+    (subcategoriaActiva === "Todos" || p.subcategoria === subcategoriaActiva)
+);
     const grilla = document.getElementById('grilla');
 
     if (!lista.length){
@@ -99,7 +115,7 @@
           <div class="tarjeta-info">
             <div>
               <div class="tarjeta-nombre">${p.nombre}</div>
-              <div class="tarjeta-categoria">${p.categoria}</div>
+              <div class="tarjeta-categoria">${p.categoria}${p.subcategoria ? ' · ' + p.subcategoria : ''}</div>
             </div>
            <p class="tarjeta-desc">${armarDescripcion(p)}</p>
             <span class="tarjeta-ver">Ver producto →</span>
@@ -113,11 +129,21 @@
     `).join('');
   }
 
-  document.getElementById('filaFiltros').addEventListener('click', e => {
+    document.getElementById('filaFiltros').addEventListener('click', e => {
     const boton = e.target.closest('[data-categoria]');
     if (!boton) return;
     categoriaActiva = boton.dataset.categoria;
+    subcategoriaActiva = "Todos";
     dibujarCategorias();
+    dibujarSubcategorias();
+    dibujarProductos();
+  });
+
+  document.getElementById('filaSubfiltros').addEventListener('click', e => {
+    const boton = e.target.closest('[data-subcategoria]');
+    if (!boton) return;
+    subcategoriaActiva = boton.dataset.subcategoria;
+    dibujarSubcategorias();
     dibujarProductos();
   });
 
@@ -202,6 +228,7 @@
   iniciarCarrito();
   escribirTerminal();
   dibujarCategorias();
+  dibujarSubcategorias();
   dibujarProductos();
 </script>
 </body>
