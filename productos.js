@@ -290,7 +290,106 @@ const productos = [
     detalle: ""
   },
 
-  //25
+   {
+    id: 25,
+    nombre: "Sticker Gato Lunar",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/gatitolunar.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+   {
+    id: 26,
+    nombre: "Sticker Abrochadora en Gelatina",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/AbrochadoraEnGelatina.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+   {
+    id: 27,
+    nombre: "Sticker Bandera Palestina",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/banderaPalestina.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+   {
+    id: 28,
+    nombre: "Sticker Pokemon Cubone",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/cubone.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+   {
+    id: 29,
+    nombre: "Sticker Gato Rosa",
+    categoria: "Vinilos",
+    subcategoria: "Holográficos",
+    precio: 1500,
+    imagen: "assets/gatoPeladoRosa.png",
+    descripcion: "Tamaño 8cm aprox.",
+    detalle: ""
+  },
+
+   {
+    id: 30,
+    nombre: "Sticker Gato Lunar",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/gatitolunar.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+   {
+    id: 31,
+    nombre: "Sticker Itachi",
+    categoria: "Vinilos",
+    subcategoria: "Holográficos",
+    precio: 1500,
+    imagen: "assets/itachi.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+  {
+    id: 32,
+    nombre: "Sticker Mayers",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/MichaelMayers.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+  {
+    id: 33,
+    nombre: "Sticker Termo con mate",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/termoConMate.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+  //34..
 
 
   /* PLANTILLA PARA NUEVOS PRODUCTOS
