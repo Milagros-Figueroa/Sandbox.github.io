@@ -104,6 +104,84 @@ const productos = [
     detalle: ""
   },
 
+     {
+    id: 8,
+    nombre: "Sticker Venus de Jalea",
+    categoria: "Vinilos",
+    subcategoria: "Holográficos",
+    precio: 1500,
+    imagen: "assets/venusDeJalea.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+     {
+    id: 10,
+    nombre: "Sticker Unos Matematicos",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/unosMatematicos.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+     {
+    id: 11,
+    nombre: "Sticker Pobreza Gaucha",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/pobrezaGaucha.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+     {
+    id: 12,
+    nombre: "Sticker poco Polvo",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/pocoPolvo.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+  {
+    id: 13,
+    nombre: "Sticker Debi tirar mas Fots",
+    categoria: "Vinilos",
+    subcategoria: "Transparentes",
+    precio: 1500,
+    imagen: "assets/fotosBadBunny.png",
+    descripcion: "Tamaño 5cm aprox.",
+    detalle: ""
+  },
+
+  {
+    id: 14,
+    nombre: "Sticker Gato con Vinito",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/GatitoConVinito.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+  {
+    id: 15,
+    nombre: "Sticker de Discos",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/disk.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+  //16
 
 
   /* PLANTILLA PARA NUEVOS PRODUCTOS
