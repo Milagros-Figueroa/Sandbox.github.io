@@ -76,8 +76,8 @@
     contenido.innerHTML = `
       <div class="detalle">
         <div class="detalle-imagen">${armarMiniatura(producto)}</div>
-        <div class="detalle-info">
-          <span class="detalle-categoria">${producto.categoria}</span>
+                <div class="detalle-info">
+          <span class="detalle-categoria">${producto.categoria}${producto.subcategoria ? ' · ' + producto.subcategoria : ''}</span>
           <h1>${producto.nombre}</h1>
           <div class="detalle-precio">${formatearPrecio(producto.precio)}</div>
           ${textoDelProducto(producto) ? `<p class="detalle-texto">${textoDelProducto(producto)}</p>` : ''}
