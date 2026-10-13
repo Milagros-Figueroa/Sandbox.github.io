@@ -181,7 +181,116 @@ const productos = [
     detalle: ""
   },
 
-  //15
+    {
+    id: 15,
+    nombre: "Sticker de Dexter",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/dexter.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+    {
+    id: 16,
+    nombre: "Sticker gato gris",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/loli.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+    {
+    id: 17,
+    nombre: "Sticker Mary Jane",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/maryJane.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+    {
+    id: 18,
+    nombre: "Sticker Oso",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/pacienteOso.png",
+    descripcion: "Tamaño 7cm aprox.",
+    detalle: ""
+  },
+
+    {
+    id: 19,
+    nombre: "Sticker de Python",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/python.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+    {
+    id: 20,
+    nombre: "Sticker San ChatGPT",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/sanChatGPT.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+    {
+    id: 21,
+    nombre: "Sticker Carta la enfermera",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/theNurse.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+    {
+    id: 22,
+    nombre: "Sticker Alien de la Paz",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/alienVerde.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+    {
+    id: 23,
+    nombre: "Sticker Estampilla Argentina",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/etiquetaArg.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+    {
+    id: 24,
+    nombre: "Sticker Estrella Federal",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/cubone.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+  //25
 
 
   /* PLANTILLA PARA NUEVOS PRODUCTOS
