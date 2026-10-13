@@ -37,6 +37,7 @@ const productos = [
     subcategoria: "", //aun sin categoria
     precio: 7000,
     imagen: "",
+    imagenes: [],                           // Fotos extra (opcional): ["assets/foto2.png", "assets/foto3.png"]
     descripcion: "Pack mixto entre holograficos y vinilo blanco. Entre 6 y 8cm de largo",
     detalle: ""
   },
@@ -47,6 +48,7 @@ const productos = [
     subcategoria: "", //aun sin subcategoria
     precio: 40000,
     imagen: "assets/llaveroPersonalizado2.jpeg",
+    imagenes: [],
     descripcion: "Incluyen el diseño + la argolla + la pieza en PLA.",
     detalle: ""
   },
@@ -57,6 +59,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/Argentina.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -67,6 +70,7 @@ const productos = [
     subcategoria: "", //aun sin subcategoria
     precio: 6400,
     imagen: "",
+    imagenes: [],
     descripcion: "Material: PLA.",
     detalle: ""
   },
@@ -78,6 +82,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/bugHunter.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -89,6 +94,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/debiTirarMasMates.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -100,6 +106,7 @@ const productos = [
     subcategoria: "Holográficos",
     precio: 1500,
     imagen: "assets/mandalaSolar.png",
+    imagenes: [],
     descripcion: "Tamaño 8cm aprox.",
     detalle: ""
   },
@@ -111,6 +118,7 @@ const productos = [
     subcategoria: "Holográficos",
     precio: 1500,
     imagen: "assets/venusDeJalea.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -122,6 +130,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/unosMatematicos.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -133,6 +142,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/pobrezaGaucha.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -144,6 +154,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/pocoPolvo.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -155,6 +166,7 @@ const productos = [
     subcategoria: "Transparentes",
     precio: 1500,
     imagen: "assets/fotosBadBunny.png",
+    imagenes: [],
     descripcion: "Tamaño 5cm aprox.",
     detalle: ""
   },
@@ -166,6 +178,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/GatitoConVinito.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -177,6 +190,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/disk.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -188,6 +202,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/dexter.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -199,6 +214,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/loli.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -210,6 +226,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/maryJane.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -221,6 +238,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/pacienteOso.png",
+    imagenes: [],
     descripcion: "Tamaño 7cm aprox.",
     detalle: ""
   },
@@ -232,6 +250,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/python.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -243,6 +262,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/sanChatGPT.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -254,6 +274,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/theNurse.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -265,6 +286,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/alienVerde.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -275,6 +297,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/etiquetaArg.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -286,6 +309,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/EstrellaFederal.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -297,6 +321,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/gatitolunar.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -308,6 +333,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/AbrochadoraEnGelatina.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -319,6 +345,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/banderaPalestina.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -330,6 +357,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/cubone.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -341,6 +369,7 @@ const productos = [
     subcategoria: "Holográficos",
     precio: 1500,
     imagen: "assets/gatoPeladoRosa.png",
+    imagenes: [],
     descripcion: "Tamaño 8cm aprox.",
     detalle: ""
   },
@@ -352,6 +381,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/gatitolunar.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -363,6 +393,7 @@ const productos = [
     subcategoria: "Holográficos",
     precio: 1500,
     imagen: "assets/itachi.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -374,6 +405,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/MichaelMayers.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -385,6 +417,7 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/termoConMate.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
@@ -396,7 +429,32 @@ const productos = [
     subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/bobPesas.png",
+    imagenes: [],
     descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+  {
+    id: 35,
+    nombre: "Llavero Larva Hollow Knight",
+    categoria: "Impresión 3D",
+    subcategoria: "",
+    precio: 1000,
+    imagen: "assets/larva.png",
+    imagenes: [],
+    descripcion: "",
+    detalle: ""
+  },
+
+   {
+    id: 35,
+    nombre: "Ruleta juego",
+    categoria: "Impresión 3D",
+    subcategoria: "",
+    precio: 6000,
+    imagen: "assets/ruleta1.png",
+    imagenes: [assets/ruleta2.png,assets/ruleta3.png],
+    descripcion: "",
     detalle: ""
   },
 
@@ -412,6 +470,7 @@ const productos = [
     subcategoria: "",                       // una Subcategoria dentro de la categoria pra distinguir tipo de producto
     precio: 4500,                           // Solo el número, sin $ ni puntos
     imagen: "assets/nombre-de-la-foto.png", // Ruta de la foto. Si todavía no tenés, dejá "" y se ve un ícono
+    imagenes: [],                           // se muestra el resto de las imagenes del producto si las tuviese
     descripcion: "",                        // Texto corto que se suma al de la categoría (opcional, puede quedar "")
     detalle: ""                             // Texto largo para la página del producto: medidas, materiales, colores (opcional)
   },

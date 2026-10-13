@@ -72,10 +72,21 @@
 
     const mensajeConsulta = `Hola! Quiero consultar por: ${producto.nombre} (${formatearPrecio(producto.precio)})`;
     const linkConsulta = `https://wa.me/${TELEFONO_WHATSAPP}?text=${encodeURIComponent(mensajeConsulta)}`;
+    const fotos = listaDeImagenes(producto);
 
     contenido.innerHTML = `
       <div class="detalle">
-        <div class="detalle-imagen">${armarMiniatura(producto)}</div>
+                <div class="galeria">
+          <div class="detalle-imagen" id="imagenPrincipal">${armarMiniatura(producto)}</div>
+          ${fotos.length > 1 ? `
+            <div class="miniaturas">
+              ${fotos.map((ruta, i) => `
+                <button class="miniatura-foto ${i === 0 ? 'activa' : ''}" data-foto="${ruta}" aria-label="Ver foto ${i + 1}">
+                  <img src="${ruta}" alt="" onerror="this.closest('button').remove()">
+                </button>
+              `).join('')}
+            </div>` : ''}
+        </div>
                 <div class="detalle-info">
           <span class="detalle-categoria">${producto.categoria}${producto.subcategoria ? ' · ' + producto.subcategoria : ''}</span>
           <h1>${producto.nombre}</h1>
@@ -94,6 +105,16 @@
     document.getElementById('botonAgregar').addEventListener('click', () => {
       agregarAlCarrito(producto.id);
       abrirCarrito();
+    });
+
+        document.querySelectorAll('.miniatura-foto').forEach(boton => {
+      boton.addEventListener('click', () => {
+        document.getElementById('imagenPrincipal').innerHTML =
+          iconoPara(producto.categoria) +
+          `<img src="${boton.dataset.foto}" alt="${producto.nombre}" onerror="this.remove()">`;
+        document.querySelectorAll('.miniatura-foto').forEach(b => b.classList.remove('activa'));
+        boton.classList.add('activa');
+      });
     });
   }
 
