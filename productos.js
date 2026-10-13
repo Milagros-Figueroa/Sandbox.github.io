@@ -285,7 +285,7 @@ const productos = [
     categoria: "Vinilos",
     subcategoria: "Blancos",
     precio: 1000,
-    imagen: "assets/cubone.png",
+    imagen: "assets/EstrellaFederal.png",
     descripcion: "Tamaño 6cm aprox.",
     detalle: ""
   },
