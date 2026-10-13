@@ -369,7 +369,7 @@ const productos = [
 
   {
     id: 32,
-    nombre: "Sticker Mayers",
+    nombre: "Sticker Michael Myers",
     categoria: "Vinilos",
     subcategoria: "Blancos",
     precio: 1000,
@@ -389,7 +389,19 @@ const productos = [
     detalle: ""
   },
 
-  //34..
+  {
+    id: 34,
+    nombre: "Sticker Bob Esponja con Pesas",
+    categoria: "Vinilos",
+    subcategoria: "Blancos",
+    precio: 1000,
+    imagen: "assets/bobPesas.png",
+    descripcion: "Tamaño 6cm aprox.",
+    detalle: ""
+  },
+
+
+  //35..
 
 
   /* PLANTILLA PARA NUEVOS PRODUCTOS
