@@ -14,6 +14,9 @@ const TEXTO_POR_CATEGORIA = {
   "Vinilos": "Stickers de vinilo resistentes al agua, sol y roce.",
   // "Impresión 3D": "Material: PLA.",
 };
+const SUBCATEGORIAS = {
+  "Vinilos": ["Holográficos", "Transparentes", "Blancos"],
+};
 
 /* =====================================================================
    PRODUCTOS
@@ -31,6 +34,7 @@ const productos = [
     id: 1,
     nombre: "Combo x5 stickers Argentina",
     categoria: "Vinilos",
+    subcategoria: "", //aun sin categoria
     precio: 7000,
     imagen: "",
     descripcion: "Pack mixto entre holograficos y vinilo blanco. Entre 6 y 8cm de largo",
@@ -40,6 +44,7 @@ const productos = [
     id: 2,
     nombre: "Llaveros Personalizados x50 unidades",
     categoria: "Impresión 3D",
+    subcategoria: "", //aun sin subcategoria
     precio: 40000,
     imagen: "assets/llaveroPersonalizado2.jpeg",
     descripcion: "Incluyen el diseño + la argolla + la pieza en PLA.",
@@ -49,6 +54,7 @@ const productos = [
     id: 4,
     nombre: "Sticker Argentina",
     categoria: "Vinilos",
+    subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/Argentina.png",
     descripcion: "Tamaño 6cm aprox.",
@@ -58,6 +64,7 @@ const productos = [
     id: 5,
     nombre: "Soporte de celular 3D",
     categoria: "Impresión 3D",
+    subcategoria: "", //aun sin subcategoria
     precio: 6400,
     imagen: "",
     descripcion: "Material: PLA.",
@@ -68,6 +75,7 @@ const productos = [
     id: 6,
     nombre: "Sticker Cazador de Bugs",
     categoria: "Vinilos",
+    subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/bugHunter.png",
     descripcion: "Tamaño 6cm aprox.",
@@ -78,6 +86,7 @@ const productos = [
     id: 7,
     nombre: "Sticker Debi tirar mas mates",
     categoria: "Vinilos",
+    subcategoria: "Blancos",
     precio: 1000,
     imagen: "assets/debiTirarMasMates.png",
     descripcion: "Tamaño 6cm aprox.",
@@ -86,8 +95,9 @@ const productos = [
 
    {
     id: 8,
-    nombre: "Sticker Mandana Solar",
+    nombre: "Sticker Mandala Solar",
     categoria: "Vinilos",
+    subcategoria: "Holográficos",
     precio: 1500,
     imagen: "assets/mandalaSolar.png",
     descripcion: "Tamaño 8cm aprox.",
@@ -101,6 +111,7 @@ const productos = [
     id: 6,                                  // Número único: el próximo libre (si el último es 5, usá 6). No repetir.
     nombre: "Nombre del producto",          // Título que se ve en la tarjeta y en la página del producto
     categoria: "Vinilos",                   // "Vinilos", "Impresión 3D" o una nueva (se crea el filtro sola)
+    subcategoria: "",                       // una Subcategoria dentro de la categoria pra distinguir tipo de producto
     precio: 4500,                           // Solo el número, sin $ ni puntos
     imagen: "assets/nombre-de-la-foto.png", // Ruta de la foto. Si todavía no tenés, dejá "" y se ve un ícono
     descripcion: "",                        // Texto corto que se suma al de la categoría (opcional, puede quedar "")
