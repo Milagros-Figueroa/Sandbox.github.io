@@ -121,6 +121,9 @@ header{
 }
 .chip.activo, .chip:hover{ border-color: var(--acento); color: var(--text); }
 .chip.activo{ background: rgba(124,140,230,0.12); }
+.filtros-sub{ margin-top:-14px; }
+.filtros-sub:empty{ display:none; }
+.chip-sub{ font-size:0.8rem; padding:6px 14px; border-style:dashed; }
 
 /* ---------- tarjetas de producto ---------- */
 .grilla{ display:grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap: 20px; padding-bottom: 90px; }

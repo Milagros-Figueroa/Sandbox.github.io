@@ -47,6 +47,10 @@ function armarMiniatura(producto){
     : '';
   return iconoPara(producto.categoria) + foto;
 }
+// Todas las fotos de un producto: la principal + las extra
+function listaDeImagenes(producto){
+  return [producto.imagen, ...(producto.imagenes || [])].filter(Boolean);
+}
 
 /* ---------- guardar y leer el carrito (para que no se pierda al cambiar de página) ---------- */
 
