@@ -423,6 +423,18 @@ const productos = [
     detalle: ""
   },
 
+  {
+    id: 37,
+    nombre: "Llavero Axolotl",
+    categoria: "Impresión 3D",
+    subcategoria: "",
+    precio: 6000,
+    imagen: "assets/axolotl.png",
+    imagenes: ["assets/axolotl2.png"],
+    descripcion: "",
+    detalle: ""
+  },
+
   /* DESACTIVADO: era un duplicado de "Sticker Gato Lunar" (id 25).
   {
     id: 30,
