@@ -21,6 +21,18 @@ const TEXTO_POR_CATEGORIA = {
 const SUBCATEGORIAS = {
   "Vinilos": ["Holográficos", "Transparentes", "Blancos"],
 };
+// Fotos del carrusel de ferias. "texto" es opcional (puede quedar "").
+const FOTOS_FERIAS = [
+  { imagen: "assets/ferias/feria1.heic", texto: "" },
+  { imagen: "assets/ferias/feria2.jpg", texto: " " },
+  { imagen: "assets/ferias/feria3.heic", texto: "" },
+  { imagen: "assets/ferias/feria4.heic", texto: "" },
+  { imagen: "assets/ferias/feria5.heic", texto: "" },
+  { imagen: "assets/ferias/feria6.jpg",  texto: "" },
+  { imagen: "assets/ferias/feria7.jpg", texto: " " },
+  { imagen: "assets/ferias/feria8.jpg", texto: " " },
+  { imagen: "assets/ferias/feria9.heic", texto: " " }
+];
 
 /* =====================================================================
    PRODUCTOS
