@@ -168,7 +168,9 @@
      (c = clase de color: cm comentario, kw palabra clave, key clave,
       str texto, num número, punct signos, code código)
      ===================================================================== */
-  const lineasPresentacion = [
+  
+  
+     const lineasPresentacion = [
     { partes: [{ t: "// quién soy", c: "cm" }] },
     { partes: [{ t: "const", c: "kw" }, { t: " persona = {", c: "code" }] },
     { partes: [{ t: "  nombre", c: "key" }, { t: ": ", c: "punct" }, { t: '"Milagros"', c: "str" }, { t: ",", c: "punct" }] },
@@ -231,6 +233,49 @@
     }
     cuerpo.appendChild(cursor);
   }
+    /* =====================================================================
+     CARRUSEL DE FERIAS
+     ===================================================================== */
+  let pausaCarrusel = false;
+
+  function dibujarFerias(){
+    const seccion = document.getElementById('ferias');
+    if (!FOTOS_FERIAS.length){
+      seccion.style.display = 'none';
+      return;
+    }
+    document.getElementById('feriaPista').innerHTML = FOTOS_FERIAS.map(f => `
+      <figure class="carrusel-foto">
+        <img src="${f.imagen}" alt="${f.texto || 'Sandbox Stickers en una feria'}" loading="lazy" onerror="this.closest('figure').remove()">
+        ${f.texto ? `<figcaption>${f.texto}</figcaption>` : ''}
+      </figure>
+    `).join('');
+  }
+
+  function moverCarrusel(direccion){
+    const pista = document.getElementById('feriaPista');
+    const foto = pista.querySelector('.carrusel-foto');
+    const paso = foto ? foto.offsetWidth + 16 : 300;
+    const alFinal = pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 5;
+    const alInicio = pista.scrollLeft <= 5;
+
+    if (direccion > 0 && alFinal) pista.scrollTo({ left: 0 });
+    else if (direccion < 0 && alInicio) pista.scrollTo({ left: pista.scrollWidth });
+    else pista.scrollBy({ left: direccion * paso });
+  }
+
+  function iniciarAutoplayFerias(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const carrusel = document.querySelector('.carrusel');
+    carrusel.addEventListener('mouseenter', () => { pausaCarrusel = true; });
+    carrusel.addEventListener('mouseleave', () => { pausaCarrusel = false; });
+    carrusel.addEventListener('touchstart', () => { pausaCarrusel = true; }, { passive: true });
+    carrusel.addEventListener('touchend', () => { setTimeout(() => { pausaCarrusel = false; }, 6000); });
+    setInterval(() => { if (!pausaCarrusel) moverCarrusel(1); }, 4000);
+  }
+
+  document.getElementById('feriaAnterior').addEventListener('click', () => moverCarrusel(-1));
+  document.getElementById('feriaSiguiente').addEventListener('click', () => moverCarrusel(1));
 
   /* =====================================================================
      INICIO
