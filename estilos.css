@@ -262,14 +262,33 @@ footer{ border-top:1px solid var(--line); padding: 40px 24px; }
 .carrusel-pista{
   display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory;
   scroll-behavior:smooth; padding: 4px 2px 12px; scrollbar-width:none;
+  .carrusel-pista{
+  /* ...lo que ya tenés... */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 3%, #000 94%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 3%, #000 94%, transparent);
+}
 }
 .carrusel-pista::-webkit-scrollbar{ display:none; }
 .carrusel-foto{
   flex: 0 0 min(340px, 78%); margin:0; scroll-snap-align:start;
-  background: var(--panel); border:1px solid var(--line); border-radius: var(--radius); overflow:hidden;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
 }
 .carrusel-foto img{ display:block; width:100%; aspect-ratio: 4 / 3; object-fit:cover; }
-.carrusel-foto figcaption{ padding: 10px 14px; font-size:0.82rem; color: var(--text-dim); }
+
+/* si no hay texto, no ocupa lugar */
+.carrusel-foto figcaption:empty{ display:none; }
+
+/* si hay texto, se superpone sobre la foto en vez de sumar una franja */
+.carrusel-foto figcaption:not(:empty){
+  position:absolute; left:0; right:0; bottom:0;
+  padding: 24px 14px 10px;
+  background: linear-gradient(to top, rgba(10,10,13,0.85), transparent);
+  color: var(--text); font-size:0.82rem;
+}
 .carrusel-btn{
   position:absolute; top:calc(50% - 22px); z-index:3; width:44px; height:44px; border-radius:50%;
   background: rgba(10,10,13,0.8); border:1px solid var(--line); color: var(--text); font-size:1.4rem; line-height:1;
