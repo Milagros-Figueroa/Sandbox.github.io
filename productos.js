@@ -90,8 +90,8 @@ const productos = [
     nombre: "Soporte de celular 3D",
     categoria: "Impresión 3D",
     subcategoria: "",
-    precio: 6400,
-    imagen: "",
+    precio: 3500,
+    imagen: "assets/phoneHolder.png",
     imagenes: [],
     descripcion: "Material: PLA.",
     detalle: ""
@@ -372,6 +372,17 @@ const productos = [
     detalle: ""
   },
   {
+    id: 30,
+    nombre: "Cubo Infinito",
+    categoria: "Impresión 3D",
+    subcategoria: "",
+    precio: 3000,
+    imagen: "assets/cuboInfinito.jpg",
+    imagenes: ["assets/cuboInfinito1.jpg","assets/cuboInfinito2.jpg"],
+    descripcion: "",
+    detalle: ""
+  },
+  {
     id: 31,
     nombre: "Sticker Itachi",
     categoria: "Vinilos",
@@ -451,17 +462,7 @@ const productos = [
   },
 
   /* DESACTIVADO: era un duplicado de "Sticker Gato Lunar" (id 25).
-  {
-    id: 30,
-    nombre: "Sticker Gato Lunar",
-    categoria: "Vinilos",
-    subcategoria: "Blancos",
-    precio: 1000,
-    imagen: "assets/gatitolunar.png",
-    imagenes: [],
-    descripcion: "Tamaño 6cm aprox.",
-    detalle: ""
-  },
+  
   */
 
   /* PLANTILLA PARA NUEVOS PRODUCTOS (copiala arriba de esta línea, sin los símbolos de comentario)
