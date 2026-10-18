@@ -262,11 +262,8 @@ footer{ border-top:1px solid var(--line); padding: 40px 24px; }
 .carrusel-pista{
   display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory;
   scroll-behavior:smooth; padding: 4px 2px 12px; scrollbar-width:none;
-  .carrusel-pista{
-  /* ...lo que ya tenés... */
   -webkit-mask-image: linear-gradient(to right, transparent, #000 3%, #000 94%, transparent);
           mask-image: linear-gradient(to right, transparent, #000 3%, #000 94%, transparent);
-}
 }
 .carrusel-pista::-webkit-scrollbar{ display:none; }
 .carrusel-foto{
