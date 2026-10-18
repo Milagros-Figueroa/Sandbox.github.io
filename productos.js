@@ -23,15 +23,18 @@ const SUBCATEGORIAS = {
 };
 // Fotos del carrusel de ferias. "texto" es opcional (puede quedar "").
 const FOTOS_FERIAS = [
-  { imagen: "assets/ferias/feria1.jpg", texto: "" },
-  { imagen: "assets/ferias/feria2.jpg", texto: "" },
-  { imagen: "assets/ferias/feria3.jpg", texto: "" },
-  { imagen: "assets/ferias/feria4.jpg", texto: "" },
-  { imagen: "assets/ferias/feria5.jpg", texto: "" },
-  { imagen: "assets/ferias/feria6.jpg",  texto:"" },
-  { imagen: "assets/ferias/feria7.jpg", texto: "" },
-  { imagen: "assets/ferias/feria8.jpg", texto: "" },
-  { imagen: "assets/ferias/feria9.jpg", texto: "" }
+  { imagen: "assets/ferias/feria1.jpg", texto: " " },
+  { imagen: "assets/ferias/feria2.jpg", texto: " " },
+  { imagen: "assets/ferias/feria3.jpg", texto: " " },
+  { imagen: "assets/ferias/feria4.jpg", texto: " " },
+  { imagen: "assets/ferias/feria5.jpg", texto: " " },
+  { imagen: "assets/ferias/feria6.jpg",  texto:" " },
+  { imagen: "assets/ferias/feria7.jpg", texto: " " },
+  { imagen: "assets/ferias/feria8.jpg", texto: " " },
+  { imagen: "assets/ferias/feria9.jpg", texto: " " },
+  { imagen: "assets/ferias/feria10.jpg", texto: "" },
+  { imagen: "assets/ferias/feria11.jpg", texto: "" },
+  { imagen: "assets/ferias/feria12.jpg", texto: "" }
 ];
 
 /* =====================================================================
