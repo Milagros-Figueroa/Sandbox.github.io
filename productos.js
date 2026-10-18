@@ -454,7 +454,7 @@ const productos = [
     nombre: "Llavero Axolotl",
     categoria: "Impresión 3D",
     subcategoria: "",
-    precio: 6000,
+    precio: 2000,
     imagen: "assets/axolotl.png",
     imagenes: ["assets/axolotl2.png"],
     descripcion: "",
