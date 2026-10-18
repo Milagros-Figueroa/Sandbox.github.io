@@ -32,9 +32,9 @@ const FOTOS_FERIAS = [
   { imagen: "assets/ferias/feria7.jpg", texto: " " },
   { imagen: "assets/ferias/feria8.jpg", texto: " " },
   { imagen: "assets/ferias/feria9.jpg", texto: " " },
-  { imagen: "assets/ferias/feria10.jpg", texto: "" },
-  { imagen: "assets/ferias/feria11.jpg", texto: "" },
-  { imagen: "assets/ferias/feria12.jpg", texto: "" }
+  { imagen: "assets/ferias/feria10.png", texto: "" },
+  { imagen: "assets/ferias/feria11.png", texto: "" },
+  { imagen: "assets/ferias/feria12.png", texto: "" }
 ];
 
 /* =====================================================================
